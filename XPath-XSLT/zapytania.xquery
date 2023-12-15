@@ -1,0 +1,11 @@
+
+(:for $k in doc('file:///C:/Users/wandr/Desktop/Studia/ZTPD-2023/XPath-XSLT/swiat.xml')/SWIAT/KRAJE/KRAJ[starts-with(NAZWA, substring(STOLICA,1,1))]:)
+(:return <KRAJ>:)
+(: {$k/NAZWA, $k/STOLICA}:)
+(:</KRAJ>:)
+(:doc('file:///C:/Users/wandr/Desktop/Studia/ZTPD-2023/XPath-XSLT/zesp_prac.xml')//NAZWISKO:)
+(:doc('file:///C:/Users/wandr/Desktop/Studia/ZTPD-2023/XPath-XSLT/zesp_prac.xml')/ZESPOLY/ROW[NAZWA='SYSTEMY EKSPERCKIE']/PRACOWNICY/ROW/NAZWISKO/text():)
+(:count(doc('file:///C:/Users/wandr/Desktop/Studia/ZTPD-2023/XPath-XSLT/zesp_prac.xml')/ZESPOLY/ROW[ID_ZESP='10']/PRACOWNICY/ROW/NAZWISKO/text()):)
+(:count(doc('file:///C:/Users/wandr/Desktop/Studia/ZTPD-2023/XPath-XSLT/zesp_prac.xml')/ZESPOLY/ROW[ID_ZESP='10']/PRACOWNICY/ROW/NAZWISKO/text()):)
+(:doc('file:///C:/Users/wandr/Desktop/Studia/ZTPD-2023/XPath-XSLT/zesp_prac.xml')/ZESPOLY/ROW/PRACOWNICY/ROW[ID_SZEFA='100']/NAZWISKO:)
+sum(doc('file:///C:/Users/wandr/Desktop/Studia/ZTPD-2023/XPath-XSLT/zesp_prac.xml')/ZESPOLY/ROW[ID_ZESP=/ZESPOLY/ROW/PRACOWNICY/ROW[NAZWISKO='BRZEZINSKI']/ID_ZESP]/PRACOWNICY/ROW/PLACA_POD)
